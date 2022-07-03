@@ -1,93 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--prueba-->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Usuarios</title>
+    <title>Snake Empresas</title>
     <link rel="shortcut icon" href="/paginaInicio/assets/images/favicon.ico" type="image/x-icon">
     <!--Sidebar styles CSS-->
-    <link rel="stylesheet" href="/paginaInicio/assets/css/style_Cliente.css">
-    <!--font awesome V3.2.1-->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="/paginaInicio/assets/css/style_Empresa.css">
+   
 </head>
-<body>
-    <div class="container">
-        <div class="row">            
-            <h2>*Nombre Cliente*</h2>
-            
-            <hr/>
-            
-             <div id="wrapper">
-            
-        
-    
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav" style="margin-left:0;">
-                    <li class="sidebar-brand">
-                        
-                            <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="fa fa-bars " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i> 
-                        
-                    </li>
-                    <li>
-                        <a href="horarios"><i class="fa fa-search " aria-hidden="true"> </i> <span style="margin-left:10px;">Buscar</span>  </a>
-                    </li>
-                    <li>
-                        <a href="horarios"><i class="fa fa-calendar " aria-hidden="true"> </i> <span style="margin-left:10px;">Horarios</span>  </a>
-                    </li>
-                    <li>
-                        <a href="reservas"> <i class="fa fa-user " aria-hidden="true"> </i> <span style="margin-left:10px;">Citas</span> </a>
-                    </li>
-                    <li>
-                        <a href=""> <i class="fa fa-arrow-left " aria-hidden="true"> </i> <span style="margin-left:10px;">Cerrar sesión</span> </a>
-                    </li>
-                    <!--Si es necesario puedes agregare más índices-->
-                </ul>
-            </div>
-            <!-- /#sidebar-wrapper -->
-    
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            
-                             
-                            
-    </a>
-    
-    
-                        
-            
-        <!-- /#page-content-wrapper -->
-        <div id="horarios" class="CRUD horarios">
+<body class="body">
+  
+    <header class="header" role="banner">
+        <h1 class="logo">
+          <a href="/paginaInicio/index.html">Snake <span>Empresas</span></a>
+        </h1>
+        <div class="nav-wrap">
+          <nav class="main-nav" role="navigation">
+            <ul class="unstyled list-hover-slide">
+              <li><a href="#administrarHorarios">Administrar horarios</a></li>
+              <li><a href="#citas">Citas </a></li>
+              <li><a href="#Historial">Historial</a></li>
+            </ul>
+          </nav>
+          <ul class="social-links list-inline unstyled list-hover-slide">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Google+</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">CodePen</a></li>
+          </ul>
+        </div>
+      </header>
 
+      <div class="contenedorGeneral">
+        <div class="informacion_Personal">
+          
+          <div class="card usuario">
+            <h2>
+              *Nombre empresa*
+            </h2>
+            <div class="avatar">
+              <img src="*" alt="">
+            </div>           
+            <div class="btnupload">
+              <button><span>Subir Imagen</span> 
+                <input type="file" name="" id="">
+              </button>
+
+            </div>
+          </div>
+          <div class="card telefono">
+            <h2>
+              Formas de contacto:
+            </h2>
+            <ul>
+              <li>
+                Numero agregado
+              </li>
+            </ul>
+            <form action="">
+              <input type="number" name="" id="" placeholder="Ingresa número de contacto">
+              <button>Agergar</button>
+            </form>
+          </div>
+          <div class="card telefono">
+            <h2>
+              Donde encontrarnos:
+            </h2>
+            <ul>
+              <li>
+                Dirección agregada
+              </li>
+            </ul>
+            <form action="">
+              <input type="number" name="" id="" placeholder="Ingresa dirección">
+              <button>Agergar</button>
+            </form>
+          </div>
         </div>
-        <div id="reservas" class="reservas"></div>
-       
-        <!-- /#wrapper -->
-    
-        
-        <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-        </script>
-    
-    
-        
+
+
+        <h1 class="titulo">
+            Administrar Horarios
+        </h1>
+        <div id="administrarHorarios" class="administrarHorario"><!--muestra solo los horarios disponibles-->          
+              <table class="tablaAdministrarHorarios">
+                <tr class="tablaVista">
+                  <td>Id</td>
+                  <td>Servicio</td>
+                  <td>Fecha</td>
+                  <td>Hora</td>
+                  <td>Usuario</td><!--usuario que reserva-->
+                  <td>Estado</td><!--lbre, reservado, Atendido-->
+                  <td>Acción</td>
+                </tr>
+
+                <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+                  <td>1<!--Autoincremental--></td>
+                  <td>2<!--servicio creado--></td>
+                  <td>3<!--Fecha seleccionada--></td>
+                  <td>4<!--Hora seleccionada--></td>
+                  <td>5<!--Nombre de usuario que lo tomó--></td> <!--por defecto "-"" -->
+                  <td>6<!--Estado del servicio--></td><!--por defecto libre-->
+                  <td><div class="accciones">
+                    <button><img src="/paginaInicio/assets/images/update.svg" alt="Actualizar"></button>
+                    <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
+                </div><!--botonesde accion--> </td>
+                </tr>
+              </table>
+            <div class="contenedorCRUD">
+                <div class="cajaCrud">
+                  <form action="">
+                    <input class="inputText" type="number" placeholder="Numero de plazas" required>
+
+                    <input class="inputText" type="text" placeholder="Servicio" required>
+                    
+                    <input class="inputDate" type="date" name="" id="" required>
+                    
+                    <input class="inputTime" type="time" required>
+                    
+                    <button>Crear</button>
+                  </form>                    
+                </div>
+            </div>
         </div>
-         </div>
- 
+
+        <!--Parte Citas-->
+
+        <h1 class="titulo">
+          Citas Pendientes
+      </h1>
+
+        <div class="contenedorCitas" id="citas"> <!--muestra las citas que ya están pendientes--> 
+          <table class="tablaCitas">
+            <tr class="tablaVista">
+              <td>Id</td>
+              <td>Servicio</td>
+              <td>Fecha</td>
+              <td>Hora</td>
+              <td>Usuario</td>
+              <td>Estado</td><!--reservado-->
+              <td>Acción</td>
+            </tr>
+
+            <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+              <td>1<!--Autoincremental--></td>
+              <td>2<!--servicio creado--></td>
+              <td>3<!--Fecha seleccionada--></td>
+              <td>4<!--Hora seleccionada--></td>
+              <td>5<!--Nombre de usuario que lo tomó--></td> <!--usuario que reserva, al clicar el nombre le lleva a la descripccion del usuario-->
+              <td>6<!--Estado del servicio--></td><!--por defecto reservado-->
+              <td>
+                <div class="accciones">
+                  <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button><!--elimina la cita-->
+                </div><!--botonesde accion--> 
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!--Parte Historial-->
+
+        <h1 class="titulo">
+          Historial de Citas
+      </h1>
+
+        <div class="contenedorHistorial">
+          <table class="tablaCitas">
+            <tr class="tablaVista">
+              <td>Id</td>
+              <td>Servicio</td>
+              <td>Fecha</td>
+              <td>Hora</td>
+              <td>Usuario</td>
+              <td>Estado</td><!--reservado-->
+              <td>Acción</td>
+            </tr>
+
+            <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+              <td>1<!--Autoincremental--></td>
+              <td>2<!--servicio creado--></td>
+              <td>3<!--Fecha seleccionada--></td>
+              <td>4<!--Hora seleccionada--></td>
+              <td>5<!--Nombre de usuario que lo tomó--></td> <!--usuario que reserva, al clicar el nombre le lleva a la descripccion del usuario-->
+              <td>6<!--Estado del servicio--></td><!--por defecto reservado-->
+              <td>
+                <div class="accciones">
+                  <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button><!--elimina la cita-->
+                </div><!--botonesde accion--> 
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
 </body>
 </html>
