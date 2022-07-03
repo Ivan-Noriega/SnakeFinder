@@ -122,72 +122,35 @@
 .body{
   display: grid;
   grid-template-columns: 300px 1fr;
-  grid-template-rows: repeat(3, minmax(max-content, 1fr));
   min-width: 650px;
-  min-height: 400px;
-  background-color: #b2bec3;
+  background-image: url(/paginaInicio/assets/images/clients/bg_empresas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/*Administrar Horarios*/
-
-.administrarHorario{
+.contenedorGeneral{/*contenedor general*/
   margin: 0;
   padding: 0;
+}
+.administrarHorario{
   display: grid;
   grid-template-columns: 8fr 4fr;
 }
-
-
-
-@media screen and (max-width: 1400px) {
-  .body{
-    grid-template-columns: 250px 1fr;
-  }
-  .administrarHorario{
-    grid-template-columns: 1fr;
-  }
-  .header{
-    width: 250px;
-  }
+.tablaAdministrarHorarios{
+  border: 1px black solid;
+  border-radius: 10px;
+  margin: 10px;
+  background: linear-gradient(to right, rgb(0, 121, 145,0.5), rgb(120, 255, 214, 0.5));
+  backdrop-filter: blur(10px);
+  height: min-content;
+}
+.tablaVista td{
+  text-align: center;  
+}
+.tablaCompletar td{
+  text-align: center;  
 }
 
-
-.cajaVista{
-  padding-top: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit, 50px);
-  row-gap: 5px;
-  }
-.tablaDescripcion{
-  display: grid;
-  grid-template-columns: repeat(7, 1fr)
-}
-.tablaDescripcion span{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-bottom: black 1px solid;
-}
-  .tablaCompletar{
-    display: grid;
-  grid-template-columns: repeat(7, 1fr)
-}
-.tablaCompletar span{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-bottom: #000000 1px solid;
-}
-.accciones{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  place-items: center;
-}
 .accciones button{
   background: none;
   border: none;
@@ -198,17 +161,125 @@
   width: auto;  
 }
 
-
 .contenedorCRUD{
-background-color: #DF4500;  
-}
-.cajaCrud{
-  background-color: aquamarine;
-}
-
+  display: flex;
+  justify-content: center;
+  }
+  .cajaCrud{
+    max-width: 450px;
+    min-width: 400px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 40px;
+    overflow: hidden;
+    
+  }
+  .cajaCrud form{
+    height: 100%;
+    background-color: rgba(116, 125, 140, 0.418);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 380px;
+    grid-template-rows: repeat(5, 50px);
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    row-gap: 10px;
+  }
+  ::placeholder{
+    color: #f8f8f8;
+  }
+  .inputText{
+    outline: none;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px #f1f2f6 solid;
+    color: #f8f8f8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+  }
+  
+  .inputDate{
+    outline: none;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px #f1f2f6 solid;
+    color: #737475;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+  }
+  .inputTime{
+    outline: none;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 10px;
+    background: none;
+    border: none;
+    border-bottom: 1px #f1f2f6 solid;
+    color: #737475;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+  }
+  .cajaCrud button{
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #737475;
+    background: linear-gradient(to right, #4ac29a, #bdfff3);
+    cursor: pointer;
+  }
 
 /*Citas*/
-
+.contenedorCitas{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.tablaCitas{
+  border: 1px black solid;
+  border-radius: 10px;
+  margin: 10px;
+  background: linear-gradient(to right, rgb(0, 121, 145,0.5), rgb(120, 255, 214, 0.5));
+  backdrop-filter: blur(10px);
+  height: min-content;
+}
 
 
 /*Historial*/
+.contenedorHistorial{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.titulo{
+  color: #737475;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-left: 30px;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1400px) {
+  .body{
+    grid-template-columns: 250px 1fr;
+  }
+  .administrarHorario{
+    grid-template-columns: 1fr;
+  }
+  .header{
+    width: 200px;
+  }
+}
+@media screen  and (max-width: 800px) {
+  .titulo{
+    margin-top: 10px;
+    font-size: 25px;
+    text-align: center;
+  }
+}

@@ -17,7 +17,7 @@
   
     <header class="header" role="banner">
         <h1 class="logo">
-          <a href="#">Snake <span>Empresas</span></a>
+          <a href="/paginaInicio/index.html">Snake <span>Empresas</span></a>
         </h1>
         <div class="nav-wrap">
           <nav class="main-nav" role="navigation">
@@ -36,51 +36,119 @@
         </div>
       </header>
 
-      <div class="contenedor">
-      
-        <div id="administrarHorarios" class="administrarHorario"><!--muestra solo los horarios disponibles-->
-        
-            <div class="cajaVista">
-                <div class="tablaDescripcion">
-                    <span>Id</span>
-                    <span>Servicio</span>
-                    <span>Fecha</span>
-                    <span>Hora</span>
-                    <span>Usuario</span><!--usuario que reserva-->
-                    <span>Estado</span><!--lbre, reservado, Atendido-->
-                    <span>Acción</span>
-                </div>
-    
-                <div class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
-                        <span>1<!--Autoincremental--></span>
-                        <span>2<!--servicio creado--></span>
-                        <span>3<!--Fecha seleccionada--></span>
-                        <span>4<!--Hora seleccionada--></span>
-                        <span>5<!--Nombre de usuario que lo tomó--></span> <!--por defecto - -->
-                        <span>6<!--Estado del servicio--></span>  <!--por defecto libre-->
-                        <div class="accciones">
-                            <button><img src="/paginaInicio/assets/images/update.svg" alt="Actualizar"></button>
-                            <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
-                        </div><!--botonesde accion-->                                  
-                </div>
-                
-            </div>
-    
+      <div class="contenedorGeneral">
+        <h1 class="titulo">
+            Administrar Horarios
+        </h1>
+        <div id="administrarHorarios" class="administrarHorario"><!--muestra solo los horarios disponibles-->          
+              <table class="tablaAdministrarHorarios">
+                <tr class="tablaVista">
+                  <td>Id</td>
+                  <td>Servicio</td>
+                  <td>Fecha</td>
+                  <td>Hora</td>
+                  <td>Usuario</td><!--usuario que reserva-->
+                  <td>Estado</td><!--lbre, reservado, Atendido-->
+                  <td>Acción</td>
+                </tr>
+
+                <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+                  <td>1<!--Autoincremental--></td>
+                  <td>2<!--servicio creado--></td>
+                  <td>3<!--Fecha seleccionada--></td>
+                  <td>4<!--Hora seleccionada--></td>
+                  <td>5<!--Nombre de usuario que lo tomó--></td> <!--por defecto "-"" -->
+                  <td>6<!--Estado del servicio--></td><!--por defecto libre-->
+                  <td><div class="accciones">
+                    <button><img src="/paginaInicio/assets/images/update.svg" alt="Actualizar"></button>
+                    <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
+                </div><!--botonesde accion--> </td>
+                </tr>
+              </table>
             <div class="contenedorCRUD">
                 <div class="cajaCrud">
-                    <input type="text" placeholder="Servicio">
-                    <input type="date" name="" id="">
-                    <input type="time">
-                    <button><span>Crear</span></button>
+                  <form action="">
+                    <input class="inputText" type="number" placeholder="Numero de plazas" required>
+
+                    <input class="inputText" type="text" placeholder="Servicio" required>
+                    
+                    <input class="inputDate" type="date" name="" id="" required>
+                    
+                    <input class="inputTime" type="time" required>
+                    
+                    <button>Crear</button>
+                  </form>                    
                 </div>
             </div>
-          </div>
+        </div>
 
+        <!--Parte Citas-->
+
+        <h1 class="titulo">
+          Citas Pendientes
+      </h1>
+
+        <div class="contenedorCitas" id="citas"> <!--muestra las citas que ya están pendientes--> 
+          <table class="tablaCitas">
+            <tr class="tablaVista">
+              <td>Id</td>
+              <td>Servicio</td>
+              <td>Fecha</td>
+              <td>Hora</td>
+              <td>Usuario</td>
+              <td>Estado</td><!--reservado-->
+              <td>Acción</td>
+            </tr>
+
+            <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+              <td>1<!--Autoincremental--></td>
+              <td>2<!--servicio creado--></td>
+              <td>3<!--Fecha seleccionada--></td>
+              <td>4<!--Hora seleccionada--></td>
+              <td>5<!--Nombre de usuario que lo tomó--></td> <!--usuario que reserva, al clicar el nombre le lleva a la descripccion del usuario-->
+              <td>6<!--Estado del servicio--></td><!--por defecto reservado-->
+              <td>
+                <div class="accciones">
+                  <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button><!--elimina la cita-->
+                </div><!--botonesde accion--> 
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!--Parte Historial-->
+
+        <h1 class="titulo">
+          Historial de Citas
+      </h1>
+
+        <div class="contenedorHistorial">
+          <table class="tablaCitas">
+            <tr class="tablaVista">
+              <td>Id</td>
+              <td>Servicio</td>
+              <td>Fecha</td>
+              <td>Hora</td>
+              <td>Usuario</td>
+              <td>Estado</td><!--reservado-->
+              <td>Acción</td>
+            </tr>
+
+            <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+              <td>1<!--Autoincremental--></td>
+              <td>2<!--servicio creado--></td>
+              <td>3<!--Fecha seleccionada--></td>
+              <td>4<!--Hora seleccionada--></td>
+              <td>5<!--Nombre de usuario que lo tomó--></td> <!--usuario que reserva, al clicar el nombre le lleva a la descripccion del usuario-->
+              <td>6<!--Estado del servicio--></td><!--por defecto reservado-->
+              <td>
+                <div class="accciones">
+                  <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button><!--elimina la cita-->
+                </div><!--botonesde accion--> 
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
-
-      
-
-      
-
 </body>
 </html>
