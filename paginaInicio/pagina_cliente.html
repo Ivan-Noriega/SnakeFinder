@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Empresas</title>
+    <title>Snake Usuarios</title>
     <link rel="shortcut icon" href="/paginaInicio/assets/images/favicon.ico" type="image/x-icon">
     <!--Sidebar styles CSS-->
     <link rel="stylesheet" href="/paginaInicio/assets/css/style_Empresa.css">
@@ -17,7 +17,7 @@
   
     <header class="header" role="banner">
         <h1 class="logo">
-          <a href="/paginaInicio/index.html">Snake <span>Empresas</span></a>
+          <a href="/paginaInicio/index.html">Snake <span>usuarios</span></a>
         </h1>
         <div class="nav-wrap">
           <nav class="main-nav" role="navigation">
@@ -41,7 +41,7 @@
           
           <div class="card usuario">
             <h2>
-              *Nombre empresa*
+              *Nombre usuario*
             </h2>
             <div class="avatar">
               <img src="*" alt="">
@@ -69,7 +69,7 @@
           </div>
           <div class="card telefono">
             <h2>
-              Donde encontrarnos:
+              Donde vivo:
             </h2>
             <ul>
               <li>
@@ -94,12 +94,12 @@
                   <td>Servicio</td>
                   <td>Fecha</td>
                   <td>Hora</td>
-                  <td>Usuario</td><!--usuario que reserva-->
+                  <td>Empresa</td><!--usuario que ofrece-->
                   <td>Estado</td><!--lbre, reservado, Atendido-->
                   <td>Acción</td>
                 </tr>
 
-                <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+                <tr class="tablaCompletar"><!--Muestra los servicios disponibles y el estado de los mismos-->
                   <td>1<!--Autoincremental--></td>
                   <td>2<!--servicio creado--></td>
                   <td>3<!--Fecha seleccionada--></td>
@@ -107,7 +107,7 @@
                   <td>5<!--Nombre de usuario que lo tomó--></td> <!--por defecto "-"" -->
                   <td>6<!--Estado del servicio--></td><!--por defecto libre-->
                   <td><div class="accciones">
-                    <button><img src="/paginaInicio/assets/images/update.svg" alt="Actualizar"></button>
+                    <button><img src="/paginaInicio/assets/images/add.svg" alt="Actualizar"></button>
                     <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
                 </div><!--botonesde accion--> </td>
                 </tr>
@@ -115,15 +115,15 @@
             <div class="contenedorCRUD">
                 <div class="cajaCrud">
                   <form action="">
-                    <input class="inputText" type="number" placeholder="Numero de plazas" required>
+                    
 
-                    <input class="inputText" type="text" placeholder="Servicio" required>
+                    <input class="inputText" type="text" placeholder="Buscar servicio" required>
                     
                     <input class="inputDate" type="date" name="" id="" required>
                     
                     <input class="inputTime" type="time" required>
                     
-                    <button>Crear</button>
+                    <button>Buscar</button>
                   </form>                    
                 </div>
             </div>
@@ -136,29 +136,27 @@
       </h1>
 
         <div class="contenedorCitas" id="citas"> <!--muestra las citas que ya están pendientes--> 
-          <table class="tablaCitas">
+          <table class="tablaAdministrarHorarios">
             <tr class="tablaVista">
               <td>Id</td>
               <td>Servicio</td>
               <td>Fecha</td>
               <td>Hora</td>
-              <td>Usuario</td>
-              <td>Estado</td><!--reservado-->
+              <td>Empresa</td><!--usuario que ofrece-->
+              <td>Estado</td><!--lbre, reservado, Atendido-->
               <td>Acción</td>
             </tr>
 
-            <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+            <tr class="tablaCompletar"><!--Muestra los servicios disponibles y el estado de los mismos-->
               <td>1<!--Autoincremental--></td>
               <td>2<!--servicio creado--></td>
               <td>3<!--Fecha seleccionada--></td>
               <td>4<!--Hora seleccionada--></td>
-              <td>5<!--Nombre de usuario que lo tomó--></td> <!--usuario que reserva, al clicar el nombre le lleva a la descripccion del usuario-->
-              <td>6<!--Estado del servicio--></td><!--por defecto reservado-->
-              <td>
-                <div class="accciones">
-                  <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button><!--elimina la cita-->
-                </div><!--botonesde accion--> 
-              </td>
+              <td>5<!--Nombre de usuario que lo tomó--></td> <!--por defecto "-"" -->
+              <td>6<!--Estado del servicio--></td><!--por defecto libre-->
+              <td><div class="accciones">                
+                <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
+            </div><!--botonesde accion--> </td>
             </tr>
           </table>
         </div>
@@ -170,29 +168,27 @@
       </h1>
 
         <div class="contenedorHistorial">
-          <table class="tablaCitas">
+          <table class="tablaAdministrarHorarios">
             <tr class="tablaVista">
               <td>Id</td>
               <td>Servicio</td>
               <td>Fecha</td>
               <td>Hora</td>
-              <td>Usuario</td>
-              <td>Estado</td><!--reservado-->
+              <td>Empresa</td><!--usuario que ofrece-->
+              <td>Estado</td><!--lbre, reservado, Atendido-->
               <td>Acción</td>
             </tr>
 
-            <tr class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+            <tr class="tablaCompletar"><!--Muestra los servicios disponibles y el estado de los mismos-->
               <td>1<!--Autoincremental--></td>
               <td>2<!--servicio creado--></td>
               <td>3<!--Fecha seleccionada--></td>
               <td>4<!--Hora seleccionada--></td>
-              <td>5<!--Nombre de usuario que lo tomó--></td> <!--usuario que reserva, al clicar el nombre le lleva a la descripccion del usuario-->
-              <td>6<!--Estado del servicio--></td><!--por defecto reservado-->
-              <td>
-                <div class="accciones">
-                  <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button><!--elimina la cita-->
-                </div><!--botonesde accion--> 
-              </td>
+              <td>5<!--Nombre de usuario que lo tomó--></td> <!--por defecto "-"" -->
+              <td>6<!--Estado del servicio--></td><!--por defecto libre-->
+              <td><div class="accciones">                
+                <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
+            </div><!--botonesde accion--> </td>
             </tr>
           </table>
         </div>
