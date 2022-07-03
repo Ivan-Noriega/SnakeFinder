@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--prueba-->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 
 <head>
@@ -15,76 +11,76 @@
     <link rel="shortcut icon" href="/paginaInicio/assets/images/favicon.ico" type="image/x-icon">
     <!--Sidebar styles CSS-->
     <link rel="stylesheet" href="/paginaInicio/assets/css/style_Empresa.css">
-    <!--font awesome V3.2.1-->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    
+   
 </head>
-<body>
-    <div class="container">
-        <div class="row">            
-            <h2>*Nombre Empresa*</h2>
-            
-            <hr/>
-            
-             <div id="wrapper">
-            
-        
-    
-            <!-- Sidebar -->
-            <div id="sidebar-wrapper">
-                <ul class="sidebar-nav" style="margin-left:0;">
-                    <li class="sidebar-brand">
-                        
-                            <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="fa fa-bars " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i> 
-                        
-                    </li>
-                    <li>
-                        <a href="horarios"><i class="fa fa-calendar " aria-hidden="true"> </i> <span style="margin-left:10px;">Horarios</span>  </a>
-                    </li>
-                    <li>
-                        <a href="reservas"> <i class="fa fa-user " aria-hidden="true"> </i> <span style="margin-left:10px;">Citas</span> </a>
-                    </li>
-                    <li>
-                        <a href=""> <i class="fa fa-arrow-left " aria-hidden="true"> </i> <span style="margin-left:10px;">Cerrar sesión</span> </a>
-                    </li>
-                    <!--Si es necesario puedes agregare más índices-->
-                </ul>
-            </div>
-            <!-- /#sidebar-wrapper -->
-    
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            
-                             
-                            
-    </a>
-    
-    
-                        
-            
-        <!-- /#page-content-wrapper -->
-        <div id="horarios" class="CRUD horarios">
+<body class="body">
+  
+    <header class="header" role="banner">
+        <h1 class="logo">
+          <a href="#">Snake <span>Empresas</span></a>
+        </h1>
+        <div class="nav-wrap">
+          <nav class="main-nav" role="navigation">
+            <ul class="unstyled list-hover-slide">
+              <li><a href="#administrarHorarios">Administrar horarios</a></li>
+              <li><a href="#citas">Citas </a></li>
+              <li><a href="#Historial">Historial</a></li>
+            </ul>
+          </nav>
+          <ul class="social-links list-inline unstyled list-hover-slide">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Google+</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">CodePen</a></li>
+          </ul>
+        </div>
+      </header>
 
-        </div>
-        <div id="reservas" class="reservas"></div>
-       
-        <!-- /#wrapper -->
-    
+      <div class="contenedor">
+      
+        <div id="administrarHorarios" class="administrarHorario"><!--muestra solo los horarios disponibles-->
         
-        <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-        </script>
+            <div class="cajaVista">
+                <div class="tablaDescripcion">
+                    <span>Id</span>
+                    <span>Servicio</span>
+                    <span>Fecha</span>
+                    <span>Hora</span>
+                    <span>Usuario</span><!--usuario que reserva-->
+                    <span>Estado</span><!--lbre, reservado, Atendido-->
+                    <span>Acción</span>
+                </div>
     
+                <div class="tablaCompletar"><!--Muestra los servicios creados y el estado d0e los mismos-->
+                        <span>1<!--Autoincremental--></span>
+                        <span>2<!--servicio creado--></span>
+                        <span>3<!--Fecha seleccionada--></span>
+                        <span>4<!--Hora seleccionada--></span>
+                        <span>5<!--Nombre de usuario que lo tomó--></span> <!--por defecto - -->
+                        <span>6<!--Estado del servicio--></span>  <!--por defecto libre-->
+                        <div class="accciones">
+                            <button><img src="/paginaInicio/assets/images/update.svg" alt="Actualizar"></button>
+                            <button><img src="/paginaInicio/assets/images/delete.svg" alt="Eliminar"></button>
+                        </div><!--botonesde accion-->                                  
+                </div>
+                
+            </div>
     
-        
-        </div>
-         </div>
- 
+            <div class="contenedorCRUD">
+                <div class="cajaCrud">
+                    <input type="text" placeholder="Servicio">
+                    <input type="date" name="" id="">
+                    <input type="time">
+                    <button><span>Crear</span></button>
+                </div>
+            </div>
+          </div>
+
+      </div>
+
+      
+
+      
+
 </body>
 </html>
